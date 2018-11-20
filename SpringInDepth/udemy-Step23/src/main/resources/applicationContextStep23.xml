@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<!-- //i21c:  dodajemy namespace "context"
+		1) xmlns:context="http://www.springframework.org/schema/context"
+		2) do schemaLocation dodajemy:
+				2.1) http://www.springframework.org/schema/context
+				2.2) http://www.springframework.org/schema/context/spring-context.xsd
+				*analogocznie jak to było w przypadku definowania namespaceu dla "beanów"
+				-->
+
+	<!-- //i21c: dodajemy efinicje component scannowania -->
+	<context:component-scan base-package="com.in28minutes.spring.step23"/>
+
+	<!-- //i21c: ostatnim zadaniem lekcji było usunięcie XMLowych deklaracji tych 2 beanów i podpowiedzenie Springowi
+	 zeto są beany przez uzycie adnotacji. -->
+
+	<!--<bean id="xmlJdbcConnection"-->
+	<!--class="com.in28minutes.spring.step23.springin5steps.xml.XmlJdbcConnection">-->
+	<!--</bean>-->
+
+	<!--<bean id="xmlPersonDAO" class="com.in28minutes.spring.step23.springin5steps.xml.XmlPersonDAO">-->
+	<!--<property name="xmlJdbcConnection" ref="xmlJdbcConnection"/>-->
+	<!--</bean>-->
+
+</beans>

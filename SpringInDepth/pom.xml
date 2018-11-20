@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.iteration21</groupId>
+	<artifactId>SpringInDepth</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>udemy-2-2</module>
+		<module>udemy-Step1</module>
+		<module>udemy-Step1-extension</module>
+		<module>udemy-Step11</module>
+		<module>udemy-Step12-Fixed</module>
+		<module>udemy-Step14</module>
+		<module>udemy-Step15</module>
+		<module>udemy-Step16</module>
+		<module>udemy-Step17</module>
+		<module>udemy-Step18</module>
+		<module>udemy-Step19</module>
+		<module>udemy-Step22</module>
+		<module>udemy-Step23</module>
+		<module>udemy-Step25B</module>
+		<module>udemy-Step26</module>
+		<!--<module>udemy-Step29</module>-->
+	</modules>
+</project>

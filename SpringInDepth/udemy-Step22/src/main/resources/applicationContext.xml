@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd"
+xmlns:aop="http://www.springframework.org/schema/aop"
+>
+
+	<!-- //i21c: musialem dodac zeby proxy działało:
+				http://www.springframework.org/schema/aop
+			http://www.springframework.org/schema/aop/spring-aop.xsd"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+
+		source: https://www.concretepage.com/spring/spring-bean-scope-example-using-scope-annotation-and-xml-for-singleton-prototype-request-session-global-session-and-application-scope-with-scoped-proxy
+	-->
+
+	<bean id="xmlJdbcConnection"
+	      class="com.in28minutes.spring.basics.step22.xml.XmlJdbcConnection">
+	</bean>
+
+	<bean id="xmlPersonDAO" class="com.in28minutes.spring.basics.step22.xml.XmlPersonDAO">
+		<property name="xmlJdbcConnection" ref="xmlJdbcConnection"/>
+	</bean>
+
+	<!-- ############################################################## -->
+
+	<bean
+			id="xmlNsaJdbcConnection"
+			class="com.in28minutes.spring.basics.step22.i21xml.XmlNsaJDBCConnection"
+			scope="prototype">
+		<!-- //i21c: musialem dodac aop tu i w deklaracji XMLa zeby działało proxy mode dla prototype -->
+		<aop:scoped-proxy
+				proxy-target-class="true"/>
+	</bean>
+
+	<bean
+			id="nieWazneJakieIdBoNigdzieTegoNieUzywam"
+			class="com.in28minutes.spring.basics.step22.i21xml.XmlNsaPayloadDAO">
+		<property
+				name="connection"
+				ref="xmlNsaJdbcConnection"/>
+	</bean>
+
+
+</beans>
