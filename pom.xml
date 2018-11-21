@@ -30,6 +30,7 @@
         <module>heroku-hello-app</module>
 	    <module>SpringInDepth</module>
 	    <module>mockitoIntroduction</module>
+	    <module>mockito-and-spring</module>
     </modules>
 
     <!--

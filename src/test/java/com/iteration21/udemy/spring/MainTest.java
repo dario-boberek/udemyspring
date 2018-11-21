@@ -82,6 +82,37 @@ public class MainTest {
 	// new lessons below that line
 
 	@Test
+	public void step27_SpringUnitTestingWithAJavaContext() {
+
+	}
+
+	@Test
+	public void step28_SpringUnitTestingWithAnXmlContext() {
+
+	}
+
+	@Test
+	public void step29_SpringUnitTestingWithMockito() {
+
+	}
+
+
+
+	@Test
+	public void howToDeleteGitHistory() {
+		/*
+		git checkout --orphan TEMP_BRANCH
+		git add -A
+		git commit -am "Initial commit"
+		git branch -D master
+		git branch -m master
+		git push -f origin master
+
+		s: https://gist.github.com/heiswayi/350e2afda8cece810c0f6116dadbe651
+		*/
+	}
+
+	@Test
 	public void mockitoModule() {
 		//goto : com.i21.mockito123.MockitominiappApplicationTests
 
