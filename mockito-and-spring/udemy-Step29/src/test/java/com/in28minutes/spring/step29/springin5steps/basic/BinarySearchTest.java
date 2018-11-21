@@ -1,17 +1,20 @@
-package com.in28minutes.spring.basics.step15.basic;
+package com.in28minutes.spring.step29.springin5steps.basic;
 
 import static org.junit.Assert.assertEquals;
 
+import com.in28minutes.spring.step29.springin5steps.basic.BinarySearchImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.in28minutes.spring.step29.springin5steps.SpringIn5StepsBasicApplication;
+
 //Load the context
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations="/testContext.xml")
-public class BinarySearchXMLConfigurationTest {
+@ContextConfiguration(classes = SpringIn5StepsBasicApplication.class)
+public class BinarySearchTest {
 
 	// Get this bean from the context
 	@Autowired

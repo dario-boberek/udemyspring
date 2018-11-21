@@ -1,7 +1,9 @@
-package com.in28minutes.spring.basics.step15.cdi;
+package com.in28minutes.spring.step29.springin5steps.cdi;
 
 import static org.junit.Assert.assertEquals;
 
+import com.in28minutes.spring.step29.springin5steps.cdi.SomeCdiBusiness;
+import com.in28minutes.spring.step29.springin5steps.cdi.SomeCdiDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
