@@ -52,6 +52,7 @@
 			<version>1</version>
 		</dependency>
 
+		<!--//i21c: depenencies do tej lekcji -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>

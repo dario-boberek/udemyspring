@@ -1,15 +1,20 @@
-// package com.in28minutes.spring.step29.springin5steps;
-//
-//import org.junit.Test;
-//import org.junit.runner.RunWith;
-//import org.springframework.test.context.junit4.SpringRunner;
-//
-//@RunWith(SpringRunner.class)
-////@SpringBootTest
-//public class SpringIn5StepsBasicApplicationTests {
-//
-//	@Test
-//	public void contextLoads() {
-//	}
-//
-//}
+ package com.in28minutes.spring.step29.springin5steps;
+
+ import org.junit.Test;
+ import org.junit.runner.RunWith;
+ import org.springframework.test.context.ContextConfiguration;
+ import org.springframework.test.context.junit4.SpringRunner;
+
+ @RunWith(SpringRunner.class)
+//@SpringBootTest
+ //i21e "Neither GenericXmlContextLoader nor AnnotationConfigContextLoader was able to load an ApplicationContext from"
+ //i21c: solution: dodac  @ContextConfiguration(locations = {"classpath*:**/testContext.xml"})
+ //s: https://stackoverflow.com/questions/17623694/spring-not-autowiring-in-unit-tests-with-junit
+ @ContextConfiguration(locations = {"classpath*:**/testContext.xml"})
+ public class SpringIn5StepsBasicApplicationTests {
+
+	 @Test
+	 public void contextLoads() {
+	 }
+
+ }
