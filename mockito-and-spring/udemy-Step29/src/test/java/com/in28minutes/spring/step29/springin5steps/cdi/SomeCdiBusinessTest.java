@@ -11,6 +11,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
+//i21c: zalecenie - uzywac sptinga w testach najrzadziej jak to mozliwe.
+
 @RunWith(MockitoJUnitRunner.class) //i21c: potrzebujemy taki runner
 public class SomeCdiBusinessTest {
 
