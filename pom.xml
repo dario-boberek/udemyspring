@@ -31,6 +31,7 @@
 	    <module>SpringInDepth</module>
 	    <module>mockito-introduction</module>
 	    <module>mockito-and-spring</module>
+	    <module>springboot-in-10-steps</module>
     </modules>
 
     <!--
