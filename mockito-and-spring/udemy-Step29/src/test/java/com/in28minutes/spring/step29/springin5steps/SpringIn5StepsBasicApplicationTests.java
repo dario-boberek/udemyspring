@@ -11,6 +11,8 @@
  //i21c: solution: dodac  @ContextConfiguration(locations = {"classpath*:**/testContext.xml"})
  //s: https://stackoverflow.com/questions/17623694/spring-not-autowiring-in-unit-tests-with-junit
  @ContextConfiguration(locations = {"classpath*:**/testContext.xml"})
+
+ //i21c: z step 27, innym sposobem było by wskazanie klasy z kontekstem @Configuration: patrz: com.in28minutes.spring.step29.springin5steps.basic.BinarySearchTest
  public class SpringIn5StepsBasicApplicationTests {
 
 	 @Test

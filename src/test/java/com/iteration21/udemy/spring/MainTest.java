@@ -81,8 +81,11 @@ public class MainTest {
 	//---------------------------------------------------------------------------------------------
 	// new lessons below that line
 
+
+
+
 	@Test
-	public void step27_SpringUnitTestingWithAJavaContext() {
+	public void step29_SpringUnitTestingWithMockito() {
 
 	}
 
@@ -91,12 +94,11 @@ public class MainTest {
 
 	}
 
+
 	@Test
-	public void step29_SpringUnitTestingWithMockito() {
-
+	public void step27_SpringUnitTestingWithAJavaContext() {
+		//com.in28minutes.spring.step29.springin5steps.basic.BinarySearchTest
 	}
-
-
 
 	@Test
 	public void howToDeleteGitHistory() {

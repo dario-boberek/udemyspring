@@ -8,5 +8,6 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<import resource="classpath:applicationContext.xml"/>
+	<!-- //i21c: we can ovverride bean definitions here :) for testing purpose -->
 	
 </beans>

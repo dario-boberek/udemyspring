@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 //Load the context
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations="/testContext.xml")
+@ContextConfiguration(locations="/testContext.xml") //i21c: jak to zrobic uzywająć XML-owego kontekstu
 public class BinarySearchXMLConfigurationTest {
 
 	// Get this bean from the context
