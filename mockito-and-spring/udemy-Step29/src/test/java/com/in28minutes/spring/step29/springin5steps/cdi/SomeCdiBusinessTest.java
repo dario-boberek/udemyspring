@@ -11,20 +11,22 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(MockitoJUnitRunner.class) //i21c: potrzebujemy taki runner
 public class SomeCdiBusinessTest {
 
 	// Inject Mock
-	@InjectMocks
+	@InjectMocks  //i21c: wstrzykujemy mocka w taki obiekt
 	SomeCdiBusiness business;
 
 	// Create Mock
-	@Mock
+	@Mock   //i21c: dzięki tej adnotacji mozemy zdefiniowac co będzie naszym mockiem
 	SomeCdiDao daoMock;
 
+	//i21c: try testy gdzie mockujemy odpowiedz z tego samego daoMocka
+	//i21c: dzieki mockioto nie jestesmy juz zalezni od tego co getData() zwraca w prawdziwej aplikacji to my definiujemu co będzie zwracane.
 	@Test
 	public void testBasicScenario() {
-		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 4 });
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 4 }); //i21c:  definiujemy zachowanie mocka.
 		assertEquals(4, business.findGreatest());
 	}
 

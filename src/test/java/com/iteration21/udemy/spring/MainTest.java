@@ -86,12 +86,12 @@ public class MainTest {
 
 	@Test
 	public void step29_SpringUnitTestingWithMockito() {
-
+		//com.in28minutes.spring.step29.springin5steps.cdi.SomeCdiBusinessTest
 	}
 
 	@Test
 	public void step28_SpringUnitTestingWithAnXmlContext() {
-
+		//com.in28minutes.spring.step29.springin5steps.basic.BinarySearchXMLConfigurationTest
 	}
 
 

@@ -17,6 +17,7 @@ public class SomeCdiBusiness {
 		this.someCdiDao = someCdiDao;
 	}
 
+	//i21c: dopisana ta metoda
 	public int findGreatest() {
 		int greatest = Integer.MIN_VALUE;
 		int[] data = someCdiDao.getData();
