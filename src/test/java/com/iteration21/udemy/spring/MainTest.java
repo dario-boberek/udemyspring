@@ -107,6 +107,7 @@ public class MainTest {
 		git branch -D master
 		git branch -m master
 		git push -f origin master
+		git branch --set-upstream-to=origin/master master  //i21> a to zeby idea smigala dalej
 
 		s: https://gist.github.com/heiswayi/350e2afda8cece810c0f6116dadbe651
 		*/
