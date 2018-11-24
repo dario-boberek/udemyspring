@@ -85,15 +85,48 @@ public class MainTest {
 	public void springBootModule_step02() {
 
 		//i21c: o czym nalezy pamiętać jeśli nie tworzymy aplikacji Spring Bootowej?
-		//XML z zależnościami powinien zawierac odpowiednie jary dla danej warstwy - manualna praca
-		//XML z zależnościami powinien narzucać wersje jarów które są ze sobą kompatybilne
-		//zaimplementować ExceptionController.java @ControllerAdvice @EnableWebMvc
-		// we need to define complete spring configuration file component-scan, define view-resorver (InternalSourceViewResolver)
-		//implement message source to have internationaization (ReloadableResourceBundleMessageSource)
-		//some local resolver?
-		//web.xml DispatcherServlet - will act as a front controller, need to impmenet spring security, filter all the requests...
-		//logging and other stuff...
+		/*
+		XML z zależnościami powinien zawierac odpowiednie jary dla danej warstwy - manualna praca
+			* spring-webmvc
+			* spring-security-web
+			* spring-security-config
+			* jackson-databind    (some binding and validation)
+			* jstl
+			* hibernate-validator
+			* log4j
 
+		XML z zależnościami powinien narzucać wersje jarów które są ze sobą kompatybilne
+
+		zaimplementować  ExceptionController.java - for defauld Exception Handling
+			@ControllerAdvice
+			@EnableWebMvc
+			public class ExceptionController {...}
+
+		we need to define complete spring configuration file (*.xml)
+			*   component-scan,
+			*   define view-resorver (sf.web.servlet.view.InternalSourceViewResolver)
+			    	katalog gdzie są .jsp
+			    	suffix (.jsp)
+			*   implement sf.context.support.ReloadableResourceBoundleMessageSource - to have internationaization
+			*   sf.web.servlet.i18n.SessionLocalResolver
+			* web jars?
+
+		web.xml
+			* configure sf.web.servlet.DispatcherServlet
+			    it can handle all the request
+			    will act as a front controller,
+			    inside <servlet> ... </servlet>
+
+			* configure <servlet-mapping> with servlet-name "dispather"
+
+			* need to impmenet spring security, filter all the requests...
+				<filter> ... </filter>
+				<filter-mapping> ... </filter-mapping>
+
+			* <error-page>
+
+			logging and other stuff...
+		*/
 
 	}
 
