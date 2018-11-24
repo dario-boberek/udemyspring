@@ -82,6 +82,43 @@ public class MainTest {
 	// new lessons below that line
 
 	@Test
+	public void springBootModule_step03i04() {
+		//generuje projekt  z https://start.spring.io/ z modułem ewb, boot v 2.1.1 (snapshot)
+
+		//i21c: wystarczyła jedna adnotacja zeby miec resta wystawionego @RestController i 	@GetMapping("/books")
+		//http://localhost:8080/actuator
+		//http://localhost:8080/books
+
+		/*
+		{
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/actuator",
+      "templated": false
+    },
+    "health-component-instance": {
+      "href": "http://localhost:8080/actuator/health/{component}/{instance}",
+      "templated": true
+    },
+    "health": {
+      "href": "http://localhost:8080/actuator/health",
+      "templated": false
+    },
+    "health-component": {
+      "href": "http://localhost:8080/actuator/health/{component}",
+      "templated": true
+    },
+    "info": {
+      "href": "http://localhost:8080/actuator/info",
+      "templated": false
+    }
+  }
+}
+		 */
+
+	}
+
+	@Test
 	public void springBootModule_step02() {
 
 		//i21c: o czym nalezy pamiętać jeśli nie tworzymy aplikacji Spring Bootowej?

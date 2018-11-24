@@ -8,6 +8,13 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class SpringbootIn10StepsApplication {
 
+
+	//i21c: orginalna wygenerowana metoda
+	/*
+		public static void main(String[] args) {
+		SpringApplication.run(SpringbootIn10StepsApplication.class, args);
+	}
+	 */
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(SpringbootIn10StepsApplication.class, args);
 

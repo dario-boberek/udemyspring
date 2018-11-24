@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+//i21c: nowa klasa (nie wygenerowana z https://start.spring.io/)
 @RestController
 public class BooksController {
 	@GetMapping("/books")

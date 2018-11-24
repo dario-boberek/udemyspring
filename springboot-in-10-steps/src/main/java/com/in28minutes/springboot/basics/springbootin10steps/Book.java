@@ -1,5 +1,6 @@
 package com.in28minutes.springboot.basics.springbootin10steps;
 
+//i21c: nowa klasa (nie wygenerowana z https://start.spring.io/)
 public class Book {
 	long id;
 	String name;
