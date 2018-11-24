@@ -13,7 +13,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 @SpringBootApplication(scanBasePackages = "hello")
-@RestController
+@RestController //i21c: tyle wystarczy zeby spring boot umiał zrobic aplikacje webową z endponintem wystawionym restowo.
 public class DemoApplication {
 
     private final MyService myService;

@@ -81,6 +81,51 @@ public class MainTest {
 	//---------------------------------------------------------------------------------------------
 	// new lessons below that line
 
+	@Test
+	public void springBootModule_step02() {
+
+		//i21c: o czym nalezy pamiętać jeśli nie tworzymy aplikacji Spring Bootowej?
+		//XML z zależnościami powinien zawierac odpowiednie jary dla danej warstwy - manualna praca
+		//XML z zależnościami powinien narzucać wersje jarów które są ze sobą kompatybilne
+		//zaimplementować ExceptionController.java @ControllerAdvice @EnableWebMvc
+		// we need to define complete spring configuration file component-scan, define view-resorver (InternalSourceViewResolver)
+		//implement message source to have internationaization (ReloadableResourceBundleMessageSource)
+		//some local resolver?
+		//web.xml DispatcherServlet - will act as a front controller, need to impmenet spring security, filter all the requests...
+		//logging and other stuff...
+
+
+	}
+
+	@Test
+	public void springBootModule_step01() {
+		// juz mam jedną spring bootowa aplikacje webową :
+		// hello.app.DemoApplication
+
+		//i21c: cele SPRING BOOTa
+		// 1) production ready apps (microservices) quickly
+		// 2) non-functional featires "out of the box" (embeded server, metrics, health check, externalized configuration)
+
+		//i21c: czym NIE jest SB
+		// nie generuje kodu (jak jHipster pewnie) i nie jest serwerem webowym (chodz z paczki integruje sie z jettym którego uzywa wewnetrzie...)
+
+		//i21c: SB features
+		// qyick start WEB / JPA
+		// embeded servers (tomcat, jetty, undertow)
+
+		//historically install web server -> compile app -> deploy on server
+		// here: embeded server, no installaltion process
+
+		//actuator: buildin metrics - how many times service was calles? when failed? ect..
+
+
+
+
+
+
+
+
+	}
 
 
 
