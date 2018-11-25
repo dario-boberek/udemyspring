@@ -81,6 +81,39 @@ public class MainTest {
 	//---------------------------------------------------------------------------------------------
 	// new lessons below that line
 
+
+
+	@Test
+	public void springBootModule_step06() {
+		//i21c: jaka jest roznica pomiedzy spring, mvc i boot?
+
+		 //i21c: genialne! Spring rozwiazuje problem z testowalnośćią kodu!
+				//i21c: when DI and IOC is used property > loosely coupled applications > easli unit tested..
+
+	}
+	@Test
+	public void springBootModule_step05() {
+		//i21c: włączylismy logowanie
+//		application.properties:1
+//		logging.level.org.springframework = DEBUG
+
+		//autoconfiguration in the background
+		/*
+		datasourceautoconfiguration
+		embededdatbaseconfiguration - embeded if we will not specify
+		autoconfiguration jar is very complex one
+
+		włączamy logowanie co sie dzieje w tle
+		logger.sf.   = debug
+
+		autoconfiguration will also inform in logs what components were not inluded
+
+		autoconfiguration is in CORE of why spring boot works "out of the box
+
+
+		 */
+	}
+
 	@Test
 	public void springBootModule_step04() {
 		//i21c: autor jara sie tutaj tym ze wystarczyła jedna adnotacja zeby miec resta wystawionego @RestController i 	@GetMapping("/books")
