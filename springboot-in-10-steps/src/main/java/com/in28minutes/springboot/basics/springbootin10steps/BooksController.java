@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class BooksController {
 	@GetMapping("/books")
 	public List<Book> getAllBooks() {
-		return Arrays.asList(new Book(1l, "Mastering Spring 5.2", "Ranga Karanam"));
+		Book ranga_karanam = new Book(1l, "Mastering Spring 5.2", "Ranga Karanam");
+		ranga_karanam.getAuthor(); //i21c: lombok works after addinm maven dependancy.
+		return Arrays.asList(ranga_karanam);
 	}
 }

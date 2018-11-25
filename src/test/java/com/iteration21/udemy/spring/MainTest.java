@@ -82,38 +82,46 @@ public class MainTest {
 	// new lessons below that line
 
 	@Test
+	public void springBootModule_step04() {
+		//i21c: autor jara sie tutaj tym ze wystarczyła jedna adnotacja zeby miec resta wystawionego @RestController i 	@GetMapping("/books")
+
+		//i21c: aplikacja będzie dostępna tutaj
+		//http://localhost:8080/books
+	}
+
+	@Test
 	public void springBootModule_step03i04() {
+
 		//generuje projekt  z https://start.spring.io/ z modułem ewb, boot v 2.1.1 (snapshot)
 
-		//i21c: wystarczyła jedna adnotacja zeby miec resta wystawionego @RestController i 	@GetMapping("/books")
-		//http://localhost:8080/actuator
-		//http://localhost:8080/books
-
 		/*
-		{
-  "_links": {
-    "self": {
-      "href": "http://localhost:8080/actuator",
-      "templated": false
-    },
-    "health-component-instance": {
-      "href": "http://localhost:8080/actuator/health/{component}/{instance}",
-      "templated": true
-    },
-    "health": {
-      "href": "http://localhost:8080/actuator/health",
-      "templated": false
-    },
-    "health-component": {
-      "href": "http://localhost:8080/actuator/health/{component}",
-      "templated": true
-    },
-    "info": {
-      "href": "http://localhost:8080/actuator/info",
-      "templated": false
-    }
-  }
-}
+
+		http://localhost:8080/actuator
+		i21> output:
+						{
+				  "_links": {
+				    "self": {
+				      "href": "http://localhost:8080/actuator",
+				      "templated": false
+				    },
+				    "health-component-instance": {
+				      "href": "http://localhost:8080/actuator/health/{component}/{instance}",
+				      "templated": true
+				    },
+				    "health": {
+				      "href": "http://localhost:8080/actuator/health",
+				      "templated": false
+				    },
+				    "health-component": {
+				      "href": "http://localhost:8080/actuator/health/{component}",
+				      "templated": true
+				    },
+				    "info": {
+				      "href": "http://localhost:8080/actuator/info",
+				      "templated": false
+				    }
+				  }
+				}
 		 */
 
 	}
