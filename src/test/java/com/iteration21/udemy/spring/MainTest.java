@@ -82,31 +82,105 @@ public class MainTest {
 	// new lessons below that line
 
 
+	@Test
+	public void springBootModule_step07_bootStarters() {
+
+		//i21c: mamy spring-boot-starter-web - z czego on się składa?
+		/*
+		 jest to opisane w pliku:
+			 C:\Users\Darius\.m2\repository\...
+			 org\springframework\boot\spring-boot-starter-web\2.1.1.BUILD-SNAPSHOT\...
+			 spring-boot-starter-web-2.1.1.BUILD-SNAPSHOT.pom
+			 	+ np mamy spring-boot-starter-tomcat
+		 */
+
+	}
 
 	@Test
-	public void springBootModule_step06() {
+	public void springBootModule_step06_bootVsSpringVsMvc() {
 		//i21c: jaka jest roznica pomiedzy spring, mvc i boot?
 
 		 //i21c: genialne! Spring rozwiazuje problem z testowalnośćią kodu!
-				//i21c: when DI and IOC is used property > loosely coupled applications > easli unit tested..
+		//i21c: when DI and IOC is used property > loosely coupled applications > easli unit tested..
+
+		//      DI - we are injecting Object into another Object
+		//      IoC - previously class which needs dependancy creates it, now we give contol of creating object into frramework
+
+		//definiujemy beany, definiujemy jak je znaleźć, definiujemy jakie zależności są potrzebne zeby coś zadziałało
+
+		/*
+		//i21c:  silne powiązania, znowu powracamy do średnowiecza..
+				===============
+				@RestController
+				public class WelcomeController {
+
+					private WelcomeService service = new WelcomeService();
+
+					@RequestMapping("/welcome")
+					public String welcome() {
+						return service.retrieveWelcomeMessage();
+					}
+				}
+
+
+		//i21c: Spring i oświecenie
+			===============
+			+ dodaliśmy DI
+
+			@Component
+			public class WelcomeService {
+				...
+			}
+
+			@RestController
+			public class WelcomeController {
+
+				@Autowired
+				private WelcomeService service;
+
+				@RequestMapping("/welcome")
+				public String welcome() {
+					return service.retrieveWelcomeMessage();
+				}
+			}
+		 */
+
+		//i21c: Spring: JDBC / MVC / AOP / ORM / JMS / Test - nie dostardcza nowych featurów ale dotarcza nowej warstwy abstrakcji -
+			// + mniej boilerplate code
+			// + decoupling - łatwiej się testuje.
+
+		//i21c: spring boot, jeśli dodajemy adnotacje webową -> boot doda wzystko co mu sie wydaje powinno być dodane, tak samo z warstwą danych itd..
+		/*
+		różne dostępne startery SB:
+			* spring-boot-starter-actuator
+			* spring-boot-starter-undertow
+			* spring-boot-starter-logging
+			* spring-boot-starter-log4j
+
+		//i21c: spring boot celuje w stworzenie productio nready app jak najszybciej sie da - pewnie zapozyczona koncepcja z innych frameworków
+
+
+		 */
+
 
 	}
+
+
 	@Test
 	public void springBootModule_step05() {
 		//i21c: włączylismy logowanie
-//		application.properties:1
-//		logging.level.org.springframework = DEBUG
+			//	application.properties:1 > 	logging.level.org.springframework = DEBUG
 
-		//autoconfiguration in the background
+		//i21c:  autoconfiguration - a co się dzieje w tle?
 		/*
 		datasourceautoconfiguration
 		embededdatbaseconfiguration - embeded if we will not specify
-		autoconfiguration jar is very complex one
+		autoconfiguration jar is very complex one (autoconfig to jedna z bardziej złozonych konstrukcji boota - z naszego layoutu komponentów które wybralismy w starterze tworzy całą tą strukture..)
 
 		włączamy logowanie co sie dzieje w tle
 		logger.sf.   = debug
 
-		autoconfiguration will also inform in logs what components were not inluded
+		autoconfiguration will also inform in logs what components were >>> NOT <<<  inluded
 
 		autoconfiguration is in CORE of why spring boot works "out of the box
 
@@ -124,11 +198,13 @@ public class MainTest {
 
 	@Test
 	public void springBootModule_step03i04() {
+		//i21c: kod
+		// com.in28minutes.springboot.basics.springbootin10steps.SpringbootIn10StepsApplication
 
-		//generuje projekt  z https://start.spring.io/ z modułem ewb, boot v 2.1.1 (snapshot)
 
+
+		//i21c: generuje projekt  z https://start.spring.io/ z modułem ewb, boot v 2.1.1 (snapshot)
 		/*
-
 		http://localhost:8080/actuator
 		i21> output:
 						{
@@ -161,8 +237,9 @@ public class MainTest {
 
 	@Test
 	public void springBootModule_step02() {
+		//i21c: teoria
 
-		//i21c: o czym nalezy pamiętać jeśli nie tworzymy aplikacji Spring Bootowej?
+		//i21c: o czym nalezy pamiętać jeśli >>> NIE <<  tworzymy aplikacji Spring Bootowej?
 		/*
 		XML z zależnościami powinien zawierac odpowiednie jary dla danej warstwy - manualna praca
 			* spring-webmvc
@@ -210,12 +287,13 @@ public class MainTest {
 
 	@Test
 	public void springBootModule_step01() {
-		// juz mam jedną spring bootowa aplikacje webową :
-		// hello.app.DemoApplication
+		//i21c: teoria
+
+		// juz mam jedną spring bootowa aplikacje webową : hello.app.DemoApplication (z strony spring.io 15 min tutek)
 
 		//i21c: cele SPRING BOOTa
 		// 1) production ready apps (microservices) quickly
-		// 2) non-functional featires "out of the box" (embeded server, metrics, health check, externalized configuration)
+		// 2) non-functional features "out of the box" (embeded server, metrics, health check, externalized configuration)
 
 		//i21c: czym NIE jest SB
 		// nie generuje kodu (jak jHipster pewnie) i nie jest serwerem webowym (chodz z paczki integruje sie z jettym którego uzywa wewnetrzie...)
@@ -225,7 +303,7 @@ public class MainTest {
 		// embeded servers (tomcat, jetty, undertow)
 
 		//historically install web server -> compile app -> deploy on server
-		// here: embeded server, no installaltion process
+		//here: embeded server, no installaltion process
 
 		//actuator: buildin metrics - how many times service was calles? when failed? ect..
 
@@ -545,6 +623,9 @@ public class MainTest {
 				*   if property is not crucial for object to do its job, then we can use setter injection
 		since @Autovired annotation there is no difference because if property will not be filled with object we will get a runtime error.
 
+		//i21c: uwaga na pytania na rozmowie o prace - kiedy uzywac - ktoś kto nie zakumał ze od czasów @autowired ten podział nie jest konieczny będzie myslałze nie odpowiedziałem na pytanie ...
+
+
 		 */
 
 		assertTrue(VIDEO_DONE);
@@ -780,7 +861,7 @@ public class MainTest {
 
 
 	@Test
-	public void video08FastestApproachtoSolveAllYourExceptions() {
+	public void video08FastestApproachtoSolveThisCourseExceptions() {
 
 		//i21t przejrzec linka:                 https://github.com/in28minutes/in28minutes-initiatives/blob/master/The-in28Minutes-TroubleshootingGuide-And-FAQ/quick-start.md
 		assertTrue(VIDEO_DONE);

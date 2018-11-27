@@ -3,6 +3,8 @@ package hello.service;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 
+//i21c: source: https://spring.io/guides/gs/multi-module/
+//i21c: "Creating a Multi Module Project"
 @Service
 @EnableConfigurationProperties(ServiceProperties.class)
 public class MyService {
